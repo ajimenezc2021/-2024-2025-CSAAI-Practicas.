@@ -1,3 +1,4 @@
+/* Reset de estilos */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,36 +6,70 @@
     font-family: Arial, sans-serif;
 }
 
+/* Estilos generales del cuerpo */
 body {
     background-color: #f4f4f4;
     text-align: center;
+    padding: 20px;
 }
 
+/* Contenedor principal */
 .container {
     width: 80%;
+    max-width: 800px;
     margin: auto;
     padding: 20px;
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
+/* Encabezado */
 .header {
     background-color: #333;
     color: white;
     padding: 20px;
     text-align: center;
+    border-radius: 10px 10px 0 0;
 }
 
+/* Imagen de perfil ajustada para CV */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px 0;
+    object-fit: cover;
+    border: 4px solid white;
+}
+
+/* Imágenes */
+.experience-pic, .about-pic {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Secciones */
 .section {
     padding: 20px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+.section:last-child {
+    border-bottom: none;
 }
 
+.section h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Botones */
 .button {
     display: inline-block;
     margin: 20px 0;
@@ -42,10 +77,41 @@ img {
     background: #333;
     color: white;
     text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
+.button:hover {
+    background: #555;
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+    border-radius: 0 0 10px 10px;
+    margin-top: 10px;
+}
+
+/* Diseño responsive */
 @media screen and (max-width: 600px) {
     .container {
         width: 100%;
+        padding: 10px;
+    }
+
+    .section {
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .experience-pic, .about-pic {
+        max-width: 100%;
     }
 }
